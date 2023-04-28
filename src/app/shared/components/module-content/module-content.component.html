@@ -1,0 +1,34 @@
+<mat-card>
+  <header>
+    <div class="context">
+      <div class="week-background-container">
+        <div class="week-background">
+          <h2 class="week">Semana 06/02 até 28/02</h2>
+        </div>
+        <mat-icon class="arrow" fontIcon="keyboard_arrow_left"></mat-icon>
+        <mat-icon class="arrow" fontIcon="keyboard_arrow_right"></mat-icon>
+      </div>
+      <h1>Material didático</h1>
+      <h2 class="latest-presentations">
+        Acesse suas últimas apresentações de aula.
+      </h2>
+    </div>
+    <ng-container *ngIf="isAllList === true; else seeAllButton"></ng-container>
+    <ng-template #seeAllButton>
+      <button (click)="seeAll()">Ver todo conteúdo</button>
+    </ng-template>
+  </header>
+  <div [ngClass]="isAllList === true ? 'allList' : 'list'">
+    <div *ngFor="let object of data" class="item-container">
+      <div class="item">
+        <img [src]="object.thumbs.high" alt="design-image" />
+      </div>
+      <a
+        href="https://editor.trakto.io/presentation/p/{{ object.id }}"
+        target="_blank"
+        rel="noreferrer noopener"
+        >{{ object.title }}</a
+      >
+    </div>
+  </div>
+</mat-card>

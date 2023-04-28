@@ -1,0 +1,117 @@
+mat-toolbar {
+  height: 76px;
+  background: #252324;
+  color: #ffffff;
+}
+
+.opening-background {
+  background: #252324;
+}
+
+.courseware-background {
+  background: #ffffff;
+  /* background: red; */
+}
+
+/* Right side content */
+
+div.image-container {
+  left: 2.2%;
+  position: relative;
+}
+
+div.logo-top {
+  position: relative;
+}
+
+img.point {
+  width: 8.77px;
+  height: 8.76px;
+  position: absolute;
+  left: 121px;
+  bottom: 12px;
+}
+
+div.logo-bottom {
+  position: absolute;
+  bottom: -16px;
+  right: -15px;
+}
+
+button {
+  width: 254px;
+  height: 56px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #7183a6;
+  background: none;
+  border: 1px solid #7183a6;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-left: 8%;
+  cursor: pointer;
+}
+
+mat-icon#reverse-icon {
+  transform: scaleX(-1);
+}
+
+/* Left side content */
+
+img.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 5%;
+  background: red;
+  /* background: url(.png); */
+}
+
+div.line {
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background: #626366;
+}
+
+div#line-one {
+  right: 10%;
+}
+
+div#line-two {
+  right: 16%;
+}
+
+.icon {
+  position: absolute;
+  cursor: pointer;
+}
+
+mat-icon#calendar {
+  right: 26%;
+}
+
+mat-icon#notification {
+  right: 12.2%;
+}
+
+mat-icon#arrow-drop-down {
+  right: 3%;
+}
+
+span {
+  position: absolute;
+  right: 18.5%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}

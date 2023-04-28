@@ -1,0 +1,40 @@
+<body class="body-login">
+  <mat-card>
+    <div class="image">
+      <img src="../../../../assets/logo.svg" alt="logo" />
+      <img class="point" src="../../../../assets/point.svg" alt="point" />
+    </div>
+    <label class="title">Olá, faça login em sua conta.</label>
+    <form [formGroup]="formData">
+      <div class="input-container">
+        <label for="e-mail" class="label-default">E-mail</label>
+        <input
+          id="e-mail"
+          class="input-default"
+          type="email"
+          formControlName="email"
+          placeholder="example@email.com"
+        />
+      </div>
+      <div class="input-container">
+        <label for="password" class="label-default">Senha</label>
+        <input
+          id="password"
+          class="input-default"
+          type="password"
+          formControlName="password"
+          placeholder="••••••••••"
+        />
+      </div>
+      <button (click)="onLogin()">
+        <ng-container *ngIf="isLoading; else noLoading">
+          <div class="spinner"></div>
+          <span id="one" value="text">Entrando...</span>
+        </ng-container>
+        <ng-template #noLoading>
+          <span id="two" #noLoading value="text">Entrar</span>
+        </ng-template>
+      </button>
+    </form>
+  </mat-card>
+</body>

@@ -1,0 +1,101 @@
+.body-login {
+  background: #eff2f9;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+mat-card {
+  width: 300px;
+  box-shadow: none;
+  background: none;
+}
+
+div.image {
+  position: relative;
+}
+
+img.point {
+  width: 8.77px;
+  height: 8.76px;
+  position: absolute;
+  left: 115.5px;
+  top: 19.5px;
+  bottom: 5px;
+}
+
+.title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: 40px;
+  color: #04183e;
+}
+
+.input-container {
+  margin-top: 25px;
+}
+
+.input-container:focus-within label {
+  color: #0095ff;
+}
+
+.label-default {
+  font-size: 12px;
+}
+
+.input-default {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e4ebfb;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  padding: 0px 16px;
+  caret-color: #66bfff;
+}
+
+.input-default:focus {
+  border: 1px solid #66afff;
+  border-style: solid;
+}
+
+button {
+  margin-top: 30px;
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  border: 0;
+  background: #1dc763;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+.spinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: #1dc763;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(365deg);
+  }
+}

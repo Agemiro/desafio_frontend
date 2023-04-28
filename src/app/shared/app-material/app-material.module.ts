@@ -1,12 +1,10 @@
+import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  exports: [MatCardModule, MatToolbarModule, MatIconModule, OverlayModule],
 })
-export class AppMaterialModule { }
+export class AppMaterialModule {}

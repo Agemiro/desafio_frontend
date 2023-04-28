@@ -1,0 +1,65 @@
+<mat-toolbar
+  [ngClass]="
+    requestedBackground === 'opening'
+      ? 'opening-background'
+      : 'courseware-background'
+  "
+>
+  <div class="image-container">
+    <div class="logo-top">
+      <img [src]="colorLogo" alt="white-logo" />
+      <img
+        class="point"
+        src="../../../../assets/green-point.svg"
+        alt="green-point"
+      />
+    </div>
+    <div class="logo-bottom">
+      <img src="../../../../assets/e.svg" alt="e" />
+      <img src="../../../../assets/d.svg" alt="d" />
+      <img src="../../../../assets/u.svg" alt="u" />
+    </div>
+  </div>
+  <ng-container *ngIf="requestedBackground === 'opening'; else showThis">
+  </ng-container>
+  <ng-template #showThis>
+    <button>
+      <mat-icon id="reverse-icon" fontIcon="logout"></mat-icon> Trocar de
+      ambiente
+    </button>
+  </ng-template>
+  <mat-icon
+    [ngStyle]="{
+      color: requestedBackground === 'opening' ? '#E4EBFB' : '#7183A6'
+    }"
+    class="icon"
+    id="calendar"
+    fontIcon="calendar_month"
+  />
+  <span
+    [ngStyle]="{
+      color: requestedBackground === 'opening' ? '#E4EBFB' : '#7183A6'
+    }"
+    >{{ currentDate | date : "dd/MM/yyyy" }}</span
+  >
+  <div class="line" id="line-one"></div>
+  <mat-icon
+    [ngStyle]="{
+      color: requestedBackground === 'opening' ? '#E4EBFB' : '#7183A6'
+    }"
+    class="icon"
+    id="notification"
+    fontIcon="notifications_none"
+  />
+  <div class="line" id="line-two"></div>
+  <img class="circle" src="" alt="user-image" />
+  <mat-icon
+    [ngStyle]="{
+      color: requestedBackground === 'opening' ? '#E4EBFB' : '#7183A6'
+    }"
+    class="icon"
+    id="arrow-drop-down"
+    fontIcon="arrow_drop_down"
+    (click)="logout()"
+  ></mat-icon>
+</mat-toolbar>
